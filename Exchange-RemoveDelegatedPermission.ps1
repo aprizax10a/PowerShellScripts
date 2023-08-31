@@ -1,10 +1,16 @@
-﻿Import-Module ActiveDirectory
+#Remove Delegated Permission from all mailboxes in Database 
+
+Import-Module ActiveDirectory
 Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
 
+#Put your database name here
 $DatabaseName = "<Database Name>"
-$DelegatedUser = "<DOMAIN\delegated user account>"
-$AllMailbox = Get-MailboxDatabase -Identity $DatabaseName | Get-Mailbox
 
+$Put your delegated user account here
+$DelegatedUser = "<DOMAIN\delegated user account>"
+
+#Removing Delegated Permission from all mailboxes in database
+$AllMailbox = Get-MailboxDatabase -Identity $DatabaseName | Get-Mailbox
 foreach($Mailbox in $AllMailbox)
 {
     $MailboxUPN = $Mailbox.UserPrincipalName
