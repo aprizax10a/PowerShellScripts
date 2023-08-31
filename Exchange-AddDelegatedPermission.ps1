@@ -1,8 +1,8 @@
 ﻿Import-Module ActiveDirectory
 Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
 
-$DatabaseName = "KADIV"
-$DelegatedUser = "IEB\asaba"
+$DatabaseName = "<database name>"
+$DelegatedUser = "<DOMAIN\delegated username>"
 $AllMailbox = Get-MailboxDatabase -Identity $DatabaseName | Get-Mailbox
 
 foreach($Mailbox in $AllMailbox)
