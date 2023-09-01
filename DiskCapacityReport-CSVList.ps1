@@ -1,5 +1,5 @@
 ##################################################
-#Script: Disk Capacity Report
+#Script: Disk Capacity Report (CSV List)
 #Date: 2021/10/27
 ##################################################
 #Define Disk Free Space Threshold
